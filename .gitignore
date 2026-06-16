@@ -1,0 +1,34 @@
+# Vector index (rebuilt with `python rag_pipeline.py index`)
+chroma_db/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Generated reports
+clean_report.md
+
+# Duplicate/processed PDFs
+z. Processed/
+
+# Portable app build output
+PDI_RAG_portable/
+dist/
+build/
+*.spec
