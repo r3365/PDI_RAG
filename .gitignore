@@ -36,3 +36,6 @@ llama/
 dist/
 build/
 *.spec
+
+# Source PDFs (kept as markdown in md/)
+*.pdf
