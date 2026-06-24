@@ -27,8 +27,12 @@ clean_report.md
 # Duplicate/processed PDFs
 z. Processed/
 
-# Portable app build output
-PDI_RAG_portable/
+# Bundled LLM binaries (llama-server.exe, model.gguf, DLLs)
+llama/
+
+# Pake/Tauri desktop app build artifacts
+*.exe
+*.msi
 dist/
 build/
 *.spec

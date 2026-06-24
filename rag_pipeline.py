@@ -17,15 +17,16 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 os.environ['TRANSFORMERS_VERBOSITY'] = 'error'
 
 
-MD_DIR = r'F:\OneDrive\Documents\20. AI\PDI_RAG\md'
-CHROMA_DIR = r'F:\OneDrive\Documents\20. AI\PDI_RAG\chroma_db'
+_SCRIPT_DIR = Path(__file__).parent.resolve()
+
+MD_DIR = str(_SCRIPT_DIR / 'md')
+CHROMA_DIR = str(_SCRIPT_DIR / 'chroma_db')
 COLLECTION_NAME = 'ncc2025'
-LM_STUDIO_BASE = 'http://100.115.64.101:1234/v1'
+LM_STUDIO_BASE = os.getenv('LLAMA_ENDPOINT', 'http://127.0.0.1:8080/v1')
 
 TOKEN_BUDGET = 500
 TOKEN_OVERLAP = 50
 CHARS_PER_TOKEN = 4
-
 
 def estimate_tokens(text):
     return max(1, len(text) // CHARS_PER_TOKEN)
